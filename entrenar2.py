@@ -6,7 +6,7 @@ train_data_dir = 'train'
 validation_data_dir = 'validation'
 test_data_dir = 'test'
 
-# Parámetros
+# 2+2 Parámetros
 img_width, img_height = 224, 224
 batch_size = 10
 num_epochs = 10
