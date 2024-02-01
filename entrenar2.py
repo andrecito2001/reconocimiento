@@ -52,10 +52,10 @@ if train_generator.samples > 0:
     # Entrenar el modelo
     history = model.fit(
         train_generator,
-        steps_per_epoch=train_generator.samples // batch_size,
-        epochs=num_epochs,
-        validation_data=validation_generator,
-        validation_steps=validation_generator.samples // batch_size)
+        steps_per_epoch = max(1, train_generator.samples // batch_size),
+        epochs = num_epochs,
+        validation_data = validation_generator,
+        validation_steps = validation_generator.samples // batch_size)
 
     # Guardar el modelo
     model.save('trained_model')
